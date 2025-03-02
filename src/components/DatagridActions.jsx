@@ -9,13 +9,10 @@ const availableStatusData = DATA.reduce((acc, item) => {
 }, []);
 
 export default function DatagridActions({
-  selectedRows,
-  onSelectRow,
+  toggleAllRows,
   openModal,
+  selectedItems,
 }) {
-  const selectedItems = Object.keys(selectedRows)?.filter(
-    (name) => selectedRows[name]
-  );
   const selectedCount = selectedItems?.length ?? 0;
   const isIndeterminate = selectedCount > 0 && selectedCount < DATA.length;
   const isAllRowsSelected = selectedCount > 0 && selectedCount === DATA.length;
@@ -26,14 +23,14 @@ export default function DatagridActions({
 
   const toggleAllRowsSelection = () => {
     if (isAllRowsSelected) {
-      onSelectRow({});
+      toggleAllRows({});
     } else {
       const allSelectedRow = DATA.reduce((acc, item) => {
         acc[item.name] = true;
         return acc;
       }, {});
 
-      onSelectRow(allSelectedRow);
+      toggleAllRows(allSelectedRow);
     }
   };
 

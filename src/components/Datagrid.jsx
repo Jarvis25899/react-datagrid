@@ -41,8 +41,8 @@ export default function Datagrid() {
                 <tr>
                   <th colSpan={5}>
                     <DatagridActions
-                      selectedRows={selectedRows}
-                      onSelectRow={setSelectedRows}
+                      selectedItems={selectedItems}
+                      toggleAllRows={setSelectedRows}
                       openModal={() => setModalOpen(true)}
                     />
                   </th>
