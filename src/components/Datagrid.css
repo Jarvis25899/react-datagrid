@@ -1,0 +1,148 @@
+/* Container styles */
+/* .container {
+  min-height: 100vh;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+} */
+
+.card {
+  width: 100%;
+  /* max-width: 1024px; */
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 24px;
+}
+
+/* Table styles */
+.table-container {
+  overflow-x: auto;
+}
+
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-content thead tr {
+  background-color: #444;
+  text-align: left;
+}
+
+.table-content th {
+  padding: 16px;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.table-content thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.table-content thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.table-content tbody tr {
+  border-top: 1px solid #444;
+  transition: background-color 0.2s;
+}
+
+.table-content tbody tr:hover {
+  background-color: #444;
+}
+
+.table-content tbody tr:nth-child(even) {
+  background-color: #2d2d2d;
+}
+
+.table-content tbody tr:nth-child(odd) {
+  background-color: #333;
+}
+
+.table-content td {
+  padding: 16px;
+  color: #bbb;
+}
+
+.table-content .name-cell {
+  font-weight: 500;
+  color: #ccc;
+}
+
+.table-content .path-cell {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.table-container .status-cell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.table-content .download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #3b82f6;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  color: #ddd;
+}
+
+.table-content .download-btn:not(:disabled):hover {
+  background-color: #2563eb;
+}
+
+.table-content .download-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.table-content .download-btn .download-icon {
+  background-color: #fff;
+  -webkit-mask: url(../assets/download.svg) no-repeat center;
+  mask: url(../assets/download.svg) no-repeat center;
+  width: 20px;
+  height: 20px;
+}
+
+.table-content .table-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.table-content .table-actions .rows-selection {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Status Dot indicator */
+.dot-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4ade80;
+}
+
+.table-checkbox {
+  cursor: pointer;
+}

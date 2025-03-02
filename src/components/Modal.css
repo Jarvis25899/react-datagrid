@@ -1,0 +1,38 @@
+.result-modal {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #242424;
+}
+
+.result-modal[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.result-modal::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.result-modal h2 {
+  margin: 0 0 0.25rem 0;
+}
+
+.result-modal p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.result-modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #12352f;
+  color: #edfcfa;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.result-modal button:hover {
+  background: #051715;
+}
