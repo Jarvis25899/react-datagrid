@@ -13,6 +13,7 @@ export default function Modal({ open, onClose, downloadedData }) {
     }
   }, [open]);
 
+  // Using createPortal to add this dialog Modal into separate div with id modal outside root div
   return createPortal(
     <dialog ref={dialog} className="result-modal" onClose={onClose}>
       {open && (

@@ -6,8 +6,9 @@ import DatagridActions from "./DatagridActions";
 
 export default function Datagrid() {
   const [selectedRows, setSelectedRows] = useState({});
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false); // Modal state to show download success message
 
+  // Getting selected rows name
   const selectedItems = Object.keys(selectedRows)?.filter(
     (name) => selectedRows[name]
   );

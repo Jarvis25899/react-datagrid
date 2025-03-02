@@ -17,10 +17,12 @@ export default function DatagridActions({
   const isIndeterminate = selectedCount > 0 && selectedCount < DATA.length;
   const isAllRowsSelected = selectedCount > 0 && selectedCount === DATA.length;
 
+  // Checking if all selected rows have status as 'Available'
   const disableDownload =
     selectedCount === 0 ||
     !selectedItems?.every((name) => availableStatusData.includes(name));
 
+  // Logic to toggle All rows selection with Select All checkbox
   const toggleAllRowsSelection = () => {
     if (isAllRowsSelected) {
       toggleAllRows({});
